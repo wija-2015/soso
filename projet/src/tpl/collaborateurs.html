@@ -1,0 +1,40 @@
+<div class="bg-light lter b-b wrapper-md">
+  <h1 class="m-n font-thin h3">Gestions des collaborateurs</h1>
+</div>
+<div class="wrapper-md">
+	<!--<button class="btn m-b-xs btn-sm btn-primary btn-addon" data-target="#ajouterCollab" data-toggle="modal">Ajouter un collaborateur</button>
+  -->
+   <div ng-controller="ModalDemoCtrl" class="panel b-a">
+          <script type="text/ng-template" id="myModalContent.html">
+            <div ng-include="'tpl/modal.html'"></div>
+          </script>
+          <div class="panel-heading b-b b-light">L'ajout des collaborateurs</div>
+          <div class="panel-body">
+            <button class="btn m-b-xs btn-sm btn-primary btn-addon" ng-click="open()">Ajouter Collaborateur</button>
+          </div>
+      </div>
+  <div class="panel panel-default">
+    <div class ="panel-heading">
+      La liste des collaborateurs 
+    </div>
+
+    <div class="table-responsive">
+      <table  class="table table-striped b-t b-b">
+        <thead>
+          <tr>
+            <th  style="width:20%">Date de recrutement</th>
+            <th  style="width:25%">Nom </th>
+            <th  style="width:25%">Prenom</th>
+            <th  style="width:15%">Email</th>
+            <th  style="width:15%">Matricule</th>
+          </tr>
+		  <tr ng-repeat="c in collaborateurs"><td>{{c.dateRecrutement}}</td><td>{{c.nomUser}}</td><td>{{c.prenomUser}}</td><td>{{c.emailUser}}</td><td>{{c.matriculeUser}}</td></tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+	  
+	  
+    </div>
+  </div>
+</div>
