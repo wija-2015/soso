@@ -36,12 +36,7 @@ angular.module('app')
               })
 			  .state('app.collaborateurs', {
                   url: '/collaborateurs',
-                  templateUrl: 'tpl/collaborateurs.html',
-				  controller:function($scope,$http){
-					  $scope.collaborateurs=[] ;
-					  $http.get("http://localhost:8080/collaborateurs/findAll")
-    .success(function(response) {$scope.collaborateurs = response});
-				  }
+                  templateUrl: 'tpl/collaborateurs.html'
               })
               .state('app.dashboard-v2', {
                   url: '/dashboard-v2',

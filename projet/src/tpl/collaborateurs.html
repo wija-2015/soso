@@ -16,9 +16,10 @@
   <div class="panel panel-default">
     <div class ="panel-heading">
       La liste des collaborateurs 
+
     </div>
 
-    <div class="table-responsive">
+    <div class="table-responsive" ng-controller="CollaborateurCtrl">
       <table  class="table table-striped b-t b-b">
         <thead>
           <tr>
@@ -27,8 +28,9 @@
             <th  style="width:25%">Prenom</th>
             <th  style="width:15%">Email</th>
             <th  style="width:15%">Matricule</th>
+            <th style="width:25%">Action</th>
           </tr>
-		  <tr ng-repeat="c in collaborateurs"><td>{{c.dateRecrutement}}</td><td>{{c.nomUser}}</td><td>{{c.prenomUser}}</td><td>{{c.emailUser}}</td><td>{{c.matriculeUser}}</td></tr>
+		  <tr ng-repeat="c in collaborateurs"><td>{{c.dateRecrutement}}</td><td>{{c.nomUser}}</td><td>{{c.prenomUser}}</td><td>{{c.mailUser}}</td><td>{{c.matriculeUser}}</td><td><button class="btn btn-primary" onclick="supprimer(c.idCollaborateur)">supprimer</button></td></tr>
         </thead>
         <tbody>
         </tbody>

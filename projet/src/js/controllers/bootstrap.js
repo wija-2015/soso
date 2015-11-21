@@ -97,8 +97,8 @@
   app.controller('ModalInstanceCtrl', ['$scope','$http','$modalInstance', function($scope, $http,$modalInstance) {
   	$scope.collaborateur={} ;
     $scope.inserer_collab = function () {
-		 $http.post("http://localhost:8080/collaborateurs/save",$scope.collaborateur)
-    .success(function(response) {  console.log(response);});
+		 $http.post("http://localhost:8090/collaborateurs/save",$scope.collaborateur)
+    .success(function(response) {  console.log(response);console.log(JSON.stringify($scope.collaborateur))});
 
     };
 
@@ -114,6 +114,7 @@
     };
   }])
   ; 
+
   app.controller('ModalDemoCtrl', ['$http','$scope', '$modal', '$log', function($http,$scope, $modal, $log) {
     $scope.items = ['item1', 'item2', 'item3'];
 
